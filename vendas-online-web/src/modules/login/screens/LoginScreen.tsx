@@ -1,6 +1,8 @@
+import Input from '../../shared/inputs/default/input';
 import {
   BackgroundImage,
   ContainerLogin,
+  ContainerLoginScreen,
   LimitedContainer,
   LogoImage,
 } from '../styles/loginScreen.styles';
@@ -8,12 +10,16 @@ import {
 const LoginScreen = () => {
   return (
     <div>
-      <BackgroundImage src="./background.jpg" />
-      <ContainerLogin>
-        <LimitedContainer>
-          <LogoImage src="./logo.png" />
-        </LimitedContainer>
-      </ContainerLogin>
+      <ContainerLoginScreen>
+        <ContainerLogin>
+          <LimitedContainer>
+            <LogoImage src="./logo.png" />
+            <Input title="USUÁRIO:" />
+            <Input title="SENHA:" />
+          </LimitedContainer>
+        </ContainerLogin>
+        <BackgroundImage src="./background.jpg" />
+      </ContainerLoginScreen>
     </div>
   );
 };
