@@ -8,3 +8,11 @@
         - Create file '.prettierrc'
         - Update file 'eslint.config.js'
         - Create file 'settings.json' in ''.vscode'
+
+
+-> Ant Design - https://ant.design/
+        - npm install antd --save
+
+
+-> Styled Components https://styled-components.com/
+        - npm install styled-components
