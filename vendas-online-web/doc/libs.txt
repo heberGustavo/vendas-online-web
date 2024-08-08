@@ -1,10 +1,10 @@
+-> ESLint / Prettier / Trivago
+        - Install extensions "ESLint" and "Prettier - Code formatter"
+        - npm install eslint prettier --save-dev
+        - npm install eslint@8.0.0 --save-dev (npx eslint --init  ----> Existiam pacotes/funcionalidades não disponiveis)
+        - npm install --save-dev eslint-plugin-import eslint-config-prettier eslint-plugin-prettier prettier
+        - npm install prettier @trivago/prettier-plugin-sort-imports --save-dev (https://github.com/trivago/prettier-plugin-sort-imports)
 
-
---- ESLint
-        1. Install extensions "ESLint" and "Prettier - Code formatter"
-        2. 
-        2. create 2 files to configure 
-        3. removing in file 'package.json' 2 properties
-            3.1 - type and private
-            
-
+        - Create file '.prettierrc'
+        - Update file 'eslint.config.js'
+        - Create file 'settings.json' in ''.vscode'
