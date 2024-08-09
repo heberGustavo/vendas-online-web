@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Button from '../../shared/buttons/default/Button';
 import Input from '../../shared/inputs/default/Input';
 import {
@@ -10,6 +12,21 @@ import {
 } from '../styles/loginScreen.styles';
 
 const LoginScreen = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleUsername = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  const handleLogin = () => {
+    alert(`User: ${username} e password: ${password}`);
+  };
+
   return (
     <div>
       <ContainerLoginScreen>
@@ -17,9 +34,9 @@ const LoginScreen = () => {
           <LimitedContainer>
             <LogoImage src="./logo.png" />
             <TitleLogin level={2}>LOGIN</TitleLogin>
-            <Input title="USUÁRIO:" />
-            <Input title="SENHA:" />
-            <Button type="primary" margin="60px 0 0 16px">
+            <Input title="USUÁRIO:" margin="32px 0 0" onChange={handleUsername} value={username} />
+            <Input title="SENHA:" margin="32px 0 0" onChange={handlePassword} value={password} />
+            <Button type="primary" margin="60px 0 0 16px" onClick={handleLogin}>
               ENTRAR
             </Button>
           </LimitedContainer>
